@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css" />
+    <script defer src="store.js"></script>
+    <script defer src="api.js"></script>
+    <script defer src="add-user.js"></script>
+    <script defer src="users-list.js"></script>
+  </head>
+  <body>
+    <app>
+      <middle>
+        <div class="container">
+          <add-user></add-user>
+          <users-list></users-list>
+        </div>
+      </middle>
+    </app>
+
+    <template data-add-user>
+      <div class="add-user-wrapper">
+        <div class="header">Новый пользователь</div>
+        <div class="body">
+          <input type="text" placeholder="Имя" />
+          <input type="text" placeholder="Фамилия" />
+          <button>Добавить</button>
+        </div>
+      </div>
+    </template>
+
+    <template data-users-list>
+      <div class="users-list-wrapper">
+        <table class="users">
+          <thead>
+            <tr>
+              <th>Имя</th>
+              <th>Фамилия</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </template>
+
+    <template data-user-item>
+      <tr>
+        <td><input type="text" /></td>
+        <td><input type="text" /></td>
+        <td>
+          <button>Редактировать</button>
+          <button>Удалить</button>
+        </td>
+      </tr>
+    </template>
+  </body>
+</html>
